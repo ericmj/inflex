@@ -1,15 +1,10 @@
 defmodule Inflex do
-  use Inflex.Camelize
-  use Inflex.Pluralize
-  use Inflex.Parameterize
-  use Inflex.Underscore
-
   defmacro __using__([]) do
     quote do
-      use Inflex.Camelize
-      use Inflex.Pluralize
-      use Inflex.Parameterize
-      use Inflex.Underscore
+      import Inflex.Camelize
+      import Inflex.Pluralize
+      import Inflex.Parameterize
+      import Inflex.Underscore
     end
   end
 end
